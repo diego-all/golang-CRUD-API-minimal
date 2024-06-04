@@ -9,10 +9,13 @@ API written in Golang that stores information in a SQLite database. Implements C
 Domain: Product Management
 
     Category: (Id, Name, Description)
+    
+    Product: (Id, Name, Description, Price)
+
 
 Domain model using class diagram notation
 
-<img src="category_classDiagram.png" align="center"/>
+<img src="category_product_classDiagram.png" align="center"/>
 
 
 ## REST API
