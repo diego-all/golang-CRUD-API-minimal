@@ -13,9 +13,11 @@ func New(dbPool *sql.DB) Models {
 	db = dbPool
 	return Models{
 		Category: Category{},
+		Product:  Product{},
 	}
 }
 
 type Models struct {
 	Category Category
+	Product  Product
 }

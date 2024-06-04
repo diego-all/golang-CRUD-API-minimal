@@ -44,6 +44,8 @@ Only execute the API with migrations
 
     curl --location 'localhost:9090/health'
 
+### Category 
+
     curl --location 'http://localhost:9090/categories' \
     --header 'Content-Type: application/json' \
     --data '{ "name": "Footwear", "description": "Footwear and tennis" }'
@@ -57,6 +59,22 @@ Only execute the API with migrations
     curl --location 'http://localhost:9090/categories/all'
 
     curl --location --request DELETE 'http://localhost:9090/categories/delete/6'
+
+### Product
+
+    curl --location 'http://localhost:9090/products' \
+    --header 'Content-Type: application/json' \
+    --data '{ "Name": "car", "Description": "Hot weels car", "Price": 2000, "category_id": 5 }'
+
+    curl --location 'http://localhost:9090/products/get/6'
+
+    curl --location --request PUT 'http://localhost:9090/products/update/6' \
+    --header 'Content-Type: application/json' \
+    --data '{ "Name": "phantom car", "Description": "Hasbro panthom car", "Price": 4000, "category_id": 5 }'
+
+    curl --location 'http://localhost:9090/products/all'
+
+    curl --location --request DELETE 'http://localhost:9090/products/delete/6'
 
 
 

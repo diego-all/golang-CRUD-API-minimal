@@ -18,5 +18,12 @@ func (app *application) routes() http.Handler {
 	mux.Get("/categories/all", app.AllCategories)
 	mux.Delete("/categories/delete/{id}", app.DeleteCategory)
 
+	// Product
+	mux.Post("/products", app.CreateProduct)
+	mux.Get("/products/get/{id}", app.GetProduct)
+	mux.Put("/products/update/{id}", app.UpdateProduct)
+	mux.Get("/products/all", app.AllProducts)
+	mux.Delete("/products/delete/{id}", app.DeleteProduct)
+
 	return mux
 }
